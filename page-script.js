@@ -228,6 +228,12 @@ class SongDiv {
 const discography = [
     {
         title: 'Wishes',
+        number: 1379507655,
+        url: "https://adamthegolem.bandcamp.com/track/content",
+        published: true,
+    },
+    {
+        title: 'Wishes',
         number: 989907174,
         url: "https://adamthegolem.bandcamp.com/track/wishes",
         published: true,
