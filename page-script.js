@@ -125,9 +125,9 @@ navSections = {
     },
     pages: {
         navLinks: {
-            '/home/': {
+            '/': {
                 text: 'Home',
-                url: '/home'
+                url: '/'
             },
             '/music/': {
                 text: 'Music',
@@ -176,7 +176,7 @@ function setTitle(title) {
     }).element);
 }
 
-setTitle(url.pathname.replaceAll('/', '').toUpperCase() + ' - ADAM THE GOLEM');
+setTitle(navSections.pages.navLinks[url.pathname].text + ' - Adam The Golem');
 
 class BandcampPlayer {
     constructor(track) {
