@@ -354,7 +354,7 @@ document.head.appendChild(new Element({
     type: 'link',
     attrs: {
         rel: 'icon',
-        href: '/Icons/Lightbulbs.png',
+        href: '/icons/Lightbulbs.png',
     },
 }).element);
 
