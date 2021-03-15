@@ -1,0 +1,4 @@
+main.appendChild(new PageInfo({
+    header: 'Code',
+    description: "One of my hobbies is coding, which is also one of my favorite school subjects. I do it on and off, depending on if I have a school project or I have an idea that I'm passionate about. I actually made this site, so that's something...<br>I write code mostly in JavaScript. I use HTML and CSS in conjunction with JS to make webpages and Chrome extensions. The latter is probably my favorite thing to make, because I can do a lot of things I can't do with normal webpages. In addition to JS, CSS and HTML I use JSON to make those extensions. My text editor is Visual Studio Code, and I use GitHub as well. One of my projects that I'm currently working on is an extension that tries to keep the amount of open tabs down, which fixes a problem I've been dealing with.<br>I've also used C# while working on game projects using the game engine Unity. "
+}).element);

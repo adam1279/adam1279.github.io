@@ -1,0 +1,218 @@
+
+:root {
+    --blue: #4ec5ec;
+    --orange: #fe8d2a;
+    --pink: #f53dc1;
+    --green: #c1f53d;
+}
+
+@font-face {
+    font-family: Alata;
+    src: url(fonts/Alata-Regular.ttf);
+}
+body {
+    background-color: #101010;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: inline-block;
+    background-color: #212121;
+    padding: 0 8%;
+    z-index: 200;
+    box-shadow: 0px 10px 15px black;
+}
+.navbarSection {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+}
+.navbarLink, .navbarText {
+    float: left;
+    border: solid transparent 2px;
+    transition: background-color 0.2s;
+    position: relative;
+    padding: 0 10px;
+}
+.navbarLink a {
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+.navbarLink span, .navbarText span {
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    font-family: Alata;
+    padding: 15px;
+    display: inline-block;
+}
+.navbarText span {
+}
+.navbarLink[data-active='true'] {
+    border-bottom: solid var(--orange) 2px;
+}
+.navbarLink[data-active='true'] span {
+    color: var(--orange);
+}
+.navbarLink:hover {
+    background-color: #303030;
+}
+.logoImg {
+    
+}
+.navbarIcon {
+    vertical-align: -13px;
+    display: inline-block;
+    height: 40px;
+}
+.main {
+    width: 880px;
+    padding: 0 30px;
+    /*padding-top: 80px;*/
+    background-color: #101010;
+    top: 0;
+    padding-bottom: 10vh;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+
+.bandcampPlayer {
+    /*float: right;*/
+    display: inline-block;
+}
+.bandcampTeaser {
+    height: calc(400px - 18px);
+    width: calc(280px - 18px);
+    padding: 6px;
+    background: #303030;
+    border: 1px solid rgba(255,255,255,0.15);
+    font-family: Helvetica;
+    color: white;
+}
+.songDiv {
+    border: solid white 1px;
+    box-shadow: 5px 5px 5px black;
+    padding: 15px;
+}
+.songDiv .infoDiv h1 {
+    color: white;
+    font-family: Alata;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin: 0;
+}
+.songDiv .infoDiv h3 {
+    color: white;
+    font-family: Alata;
+    font-size: 10px;
+    font-weight: normal;
+    margin: 0;
+}
+.songDiv .infoDiv {
+    text-align: left;
+    float: left;
+}
+
+.pageInfo {
+    text-align: center;
+    
+    background: linear-gradient(to bottom, transparent, #212121 200px);
+    padding: 20px;
+    /*backdrop-filter: blur(100px);*/
+    margin-bottom: 20px;
+    /*box-shadow: 0px 10px 15px black;*/
+    
+}
+
+.pageInfo h1 {
+    color: white;
+    font-family: Alata;
+    font-weight: normal;
+    margin: 0;
+    text-align: center;
+}
+.pageInfo p {
+    color: white;
+    font-family: Helvetica;
+    font-weight: normal;
+    margin: 15px auto;
+    text-align: justify;
+    line-height: 25px;
+    width: 100%;
+}
+
+a, .readMore {
+    color: var(--blue);
+    text-decoration: none;
+    opacity: 0.9;
+    transition: opacity 0.2s;
+    cursor: pointer;
+}
+a:hover, .readMore:hover {
+    opacity: 1;
+}
+
+summary {
+    list-style: none;
+    display: inline-block;
+    white-space: nowrap;
+    outline: none;
+    margin: 0;
+    font-family: Helvetica;
+    margin-bottom: 10px;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+details {
+    display: inline-block;
+}
+details[open] summary {
+    margin-bottom: 0;
+}
+
+.readMoreText[data-open='true'] {
+    display: initial;
+}
+.readMoreText[data-open='false'] {
+    display: none;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+.textTable td {
+    border-bottom: solid white 1px;
+    padding: 10px 0;
+}
+td:nth-child(2) {
+    text-align: right;
+}
+.trackTable {
+    table-layout: fixed;
+}
+.trackTable td {
+    text-align: center;
+    border: 0;
+    padding-bottom: 9px;
+}
+.trackTable td:nth-child(1) {
+    text-align: left !important;
+}
+.trackTable td:nth-child(3) {
+    text-align: right !important;
+}
