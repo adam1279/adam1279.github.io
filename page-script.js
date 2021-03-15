@@ -118,7 +118,7 @@ navSections = {
                 active: 'false',
                 nonClick: true,
                 img: {
-                    url: 'Icons/Lightbulbs.png'
+                    url: 'http://adamthegolem.studio/icons/Lightbulbs.png'
                 },
             },
         }
