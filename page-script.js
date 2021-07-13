@@ -1,3 +1,8 @@
+//<a href="https://iconscout.com/icons/bandcamp" target="_blank">Bandcamp Icon</a> by <a href="https://iconscout.com/contributors/fontello">Fontello</a> on <a href="https://iconscout.com">Iconscout</a>
+//<a href="https://iconscout.com/icons/youtube" target="_blank">Youtube Logo Icon</a> by <a href="https://iconscout.com/contributors/alexis-doreau">Alexis Doreau</a> on <a href="https://iconscout.com">Iconscout</a>
+//<a href="https://iconscout.com/icons/twitter" target="_blank">Twitter Icon</a> by <a href="https://iconscout.com/contributors/unicons">Unicons Font</a> on <a href="https://iconscout.com">Iconscout</a>
+//<a href="https://iconscout.com/icons/instagram" target="_blank">Instagram Icon</a> by <a href="https://iconscout.com/contributors/unicons" target="_blank">Unicons Font</a>
+//<a href="https://iconscout.com/icons/instagram" target="_blank">Instagram Icon</a> by <a href="https://iconscout.com/contributors/unicons" target="_blank">Unicons Font</a>
 class Element {
     constructor(info) {
         this.type = info.type;
@@ -43,14 +48,15 @@ class Navbar {
 } 
 
 class NavbarSection {
-    constructor() {
+    constructor(info) {
+        this.className = (info.className) ? info.className : '';
         this.element = this.create();
     }
     create() {
         let section = new Element({
             type: 'ul',
             attrs: {
-                className: 'navbarSection',
+                className: 'navbarSection ' + this.className,
             },
         });
         navbar.element.appendChild(section.element);
@@ -66,6 +72,7 @@ class NavbarLink {
         this.active = info.active;
         this.img = info.img;
         this.section = section;
+        //this.src = info.src;
         this.element = this.create();
     }
     create() {
@@ -109,7 +116,33 @@ class NavbarLink {
         return div.element;
     }
 }
-
+extPages = {
+    bandcamp: {
+        url: "https://adamthegolem.bandcamp.com",
+        text: "Bandcamp",
+        icon: "/icons/bandcamp.svg"
+    },
+    twitter: {
+        url: 'https://twitter.com/adamthegolem',
+        text: "Twitter",
+        icon: '/icons/twitter.svg'
+    },
+    instagram: {
+        url: "https://www.instagram.com/adamthegolem/",
+        text: "Instagram",
+        icon: '/icons/instagram2.svg'
+    },
+    youtube: {
+        url: "https://www.youtube.com/channel/UCYMNYivqg18JYcnJq5FFL-A",
+        text: "YouTube",
+        icon: '/icons/youtube.svg'
+    },
+    github: {
+        url: "https://github.com/adam1279",
+        text: "GitHub",
+        icon: '/icons/github.svg'
+    }
+}
 navSections = {
     logos: {
         navLinks: {
@@ -137,11 +170,64 @@ navSections = {
                 text: 'Code',
                 url: '/code'
             },
+            '/artwork/': {
+                text: 'Artwork',
+                url: '/artwork'
+            },
+            '/politics/': {
+                text: 'Politics',
+                url: '/politics'
+            },
             '/contact/': {
                 text: 'Contact',
                 url: '/contact'
-            }
+            },
         }
+    },
+    links: {
+        navLinks: {
+            'Bandcamp': {
+                text: new Element({
+                    type: 'img',
+                    attrs: {
+                        src: extPages.bandcamp.icon,
+                        className: 'logoLink'
+                    },
+                }).element.outerHTML,
+                url: extPages.bandcamp.url
+            },
+            'YouTube': {
+                text: new Element({
+                    type: 'img',
+                    attrs: {
+                        src: extPages.youtube.icon,
+                        className: 'logoLink'
+                    },
+                }).element.outerHTML,
+                url: extPages.youtube.url
+            },
+            'Twitter': {
+                text: new Element({
+                    type: 'img',
+                    attrs: {
+                        src: extPages.twitter.icon,
+                        className: 'logoLink'
+                    },
+                }).element.outerHTML,
+                url: extPages.twitter.url
+            },
+            'Instagram': {
+                text: new Element({
+                    type: 'img',
+                    attrs: {
+                        src: extPages.instagram.icon,
+                        className: 'logoLink'
+                    },
+                }).element.outerHTML,
+                url: extPages.instagram.url,
+            }
+        },
+        className: 'logoLinks'
     }
 }
 navLinks = {
@@ -151,7 +237,10 @@ let navbar;
 function createNavbar() {
     navbar = new Navbar();
     for (let navSection of Object.keys(navSections)) {
-        sec = new NavbarSection();
+        console.log(navSections[navSection].className);
+        sec = new NavbarSection({
+            className: navSections[navSection].className
+        });
         for (let navLink of Object.keys(navSections[navSection].navLinks)) {
             new NavbarLink(navSections[navSection].navLinks[navLink], sec);
         }
@@ -227,7 +316,19 @@ class SongDiv {
 
 const discography = [
     {
-        title: 'Wishes',
+        title: 'Full of It',
+        number: 1446907317,
+        url: "https://adamthegolem.bandcamp.com/track/full-of-it",
+        published: true,
+    },
+    {
+        title: 'The End',
+        number: 940431272,
+        url: "https://adamthegolem.bandcamp.com/track/the-end",
+        published: true,
+    },
+    {
+        title: 'Content',
         number: 1379507655,
         url: "https://adamthegolem.bandcamp.com/track/content",
         published: true,
