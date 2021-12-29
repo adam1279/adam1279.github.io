@@ -173,11 +173,11 @@ navSections = {
             '/artwork/': {
                 text: 'Artwork',
                 url: '/artwork'
-            },
+            },/*
             '/politics/': {
                 text: 'Politics',
                 url: '/politics'
-            },
+            },*/
             '/contact/': {
                 text: 'Contact',
                 url: '/contact'

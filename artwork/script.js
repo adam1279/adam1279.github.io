@@ -1,6 +1,6 @@
 main.appendChild(new PageInfo({
     header: 'Artwork',
-    description: "I mostly use Adobe Photoshop to create artwork, but I have been getting into Illustrator and SVG's lately. I create all of the artwork for my music myself."
+    description: "I mostly use Photoshop to create artwork, but I have been getting into Illustrator and SVG's. I also use Blender, which I'm experimenting a lot with. I create all of the artwork for my music myself."
 }).element);
 main.appendChild(new Element({
     type: 'img',
